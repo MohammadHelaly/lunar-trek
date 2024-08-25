@@ -97,7 +97,10 @@ const UnrealEngineExplorationDownloadSection = () => {
                   controls
                 >
                   <source
-                    src="/assets/images/lunar-trek-third-person-view.mp4"
+                    src={
+                      import.meta.env.BASE_URL +
+                      "assets/images/lunar-trek-third-person-view.mp4"
+                    }
                     type="video/mp4"
                   />
                 </video>

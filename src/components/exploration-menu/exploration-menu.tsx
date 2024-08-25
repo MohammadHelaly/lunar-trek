@@ -184,7 +184,7 @@ const ExplorationMenu = () => {
           </div>
         </div>
         <img
-          src="/assets/images/legend.jpg"
+          src={import.meta.env.BASE_URL + "assets/images/legend.jpg"}
           alt="Topographic View Legend"
           className="w-full border border-gray max-lg:h-1.5"
         />

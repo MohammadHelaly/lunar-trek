@@ -82,7 +82,10 @@ const UnrealEngineExplorationIntroSection = () => {
                   controls
                 >
                   <source
-                    src="/assets/images/lunar-trek-first-person-view.mp4"
+                    src={
+                      import.meta.env.BASE_URL +
+                      "assets/images/lunar-trek-first-person-view.mp4"
+                    }
                     type="video/mp4"
                   />
                 </video>

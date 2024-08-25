@@ -7,10 +7,13 @@ const Moon = () => {
     (state) => state.data.topographicView,
   );
 
-  const moonTexture = useLoader(TextureLoader, "/assets/images/moon.jpg");
+  const moonTexture = useLoader(
+    TextureLoader,
+    import.meta.env.BASE_URL + "assets/images/moon.jpg",
+  );
   const topographyTexture = useLoader(
     TextureLoader,
-    "/assets/images/topography.jpg",
+    import.meta.env.BASE_URL + "assets/images/topography.jpg",
   );
 
   const map = topographicView === true ? topographyTexture : moonTexture;

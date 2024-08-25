@@ -130,16 +130,20 @@ const NavLinks = () => {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
-      {pathname === "/globe-exploration" && (
+      {pathname === Routes.GLOBE_EXPLORATION && (
         <>
           {renderLink(globeExplorationPageLinks[0])}
           {globeExplorationPageLinks.slice(1).map(renderLink)}
         </>
       )}
-      {pathname === "/unreal-engine-exploration" &&
+      {pathname === Routes.UNREAL_ENGINE_EXPLORATION &&
         unrealEngineExplorationPageLinks.map(renderLink)}
-      {["/", "/#explore", "/#about", "/#contact"].includes(pathname) &&
-        landingPageLinks.map(renderLink)}
+      {[
+        Routes.HOME,
+        Routes.HOME_EXPLORE,
+        Routes.HOME_ABOUT,
+        Routes.HOME_CONTACT,
+      ].includes(pathname as Routes) && landingPageLinks.map(renderLink)}
     </AnimatePresence>
   );
 };
