@@ -1,10 +1,10 @@
 enum Routes {
-  HOME = "/",
-  HOME_EXPLORE = "/#explore",
-  HOME_ABOUT = "/#about",
-  HOME_CONTACT = "/#contact",
-  GLOBE_EXPLORATION = "/globe-exploration",
-  UNREAL_ENGINE_EXPLORATION = "/unreal-engine-exploration",
+  HOME = "/lunar-trek/",
+  HOME_EXPLORE = "/lunar-trek/#explore",
+  HOME_ABOUT = "/lunar-trek/#about",
+  HOME_CONTACT = "/lunar-trek/#contact",
+  GLOBE_EXPLORATION = "/lunar-trek/globe-exploration",
+  UNREAL_ENGINE_EXPLORATION = "/lunar-trek/unreal-engine-exploration",
   WILDCARD = "*",
 }
 
