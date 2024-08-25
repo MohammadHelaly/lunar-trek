@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.lunar-trek.vercel.app/sitemap.xml
+Sitemap: https://www.mohammadhelaly.github.io/lunar-trek/sitemap.xml
