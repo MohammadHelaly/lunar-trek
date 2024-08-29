@@ -4,26 +4,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  background-color: white;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  width: 100%;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
