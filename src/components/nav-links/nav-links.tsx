@@ -6,6 +6,7 @@ import {
   useTypedSelector,
 } from "@/lib/hooks/typed-redux-hooks";
 import { dataActions } from "@/lib/store/slices/data-slice";
+import { scrollTo } from "@/lib/utils";
 
 interface LinkItem {
   text: string;
@@ -72,10 +73,22 @@ const NavLinks = () => {
     );
   };
 
+  const scrollToExploreHandler = () => {
+    scrollTo("explore");
+  };
+
+  const scrollToAboutHandler = () => {
+    scrollTo("about");
+  };
+
+  const scrollToContactHandler = () => {
+    scrollTo("contact");
+  };
+
   const landingPageLinks: LinkItem[] = [
-    { text: "Explore Luna", href: Routes.HOME_EXPLORE },
-    { text: "About", href: Routes.HOME_ABOUT },
-    { text: "Contact", href: Routes.HOME_CONTACT },
+    { text: "Explore Luna", onClick: scrollToExploreHandler },
+    { text: "About", onClick: scrollToAboutHandler },
+    { text: "Contact", onClick: scrollToContactHandler },
   ];
 
   const unrealEngineExplorationPageLinks: LinkItem[] = [
@@ -99,11 +112,7 @@ const NavLinks = () => {
   ];
 
   const renderLink = (link: LinkItem) => {
-    const Link = !link.href
-      ? "button"
-      : link.href.includes("#")
-        ? "a"
-        : NavLink;
+    const Link = !link.href ? "button" : NavLink;
 
     return (
       <motion.li
@@ -116,9 +125,8 @@ const NavLinks = () => {
       >
         <Link
           to={link.href as string}
-          href={link.href}
-          className="flex h-full items-center px-2 py-1 outline-none ring-0"
           onClick={link.onClick}
+          className="flex h-full items-center px-2 py-1"
         >
           <p className="w-full text-center font-futura text-base font-normal text-white">
             {link.text}
@@ -130,6 +138,7 @@ const NavLinks = () => {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
+      {pathname === Routes.HOME && landingPageLinks.map(renderLink)}
       {pathname === Routes.GLOBE_EXPLORATION && (
         <>
           {renderLink(globeExplorationPageLinks[0])}
@@ -138,12 +147,6 @@ const NavLinks = () => {
       )}
       {pathname === Routes.UNREAL_ENGINE_EXPLORATION &&
         unrealEngineExplorationPageLinks.map(renderLink)}
-      {[
-        Routes.HOME,
-        Routes.HOME_EXPLORE,
-        Routes.HOME_ABOUT,
-        Routes.HOME_CONTACT,
-      ].includes(pathname as Routes) && landingPageLinks.map(renderLink)}
     </AnimatePresence>
   );
 };

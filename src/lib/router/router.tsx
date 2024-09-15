@@ -1,6 +1,6 @@
 import { Routes } from "@/lib/router/routes";
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import AnimatedOutlet from "@/lib/router/animated-outlet";
+import AnimatedOutlet from "@/components/animated-outlet";
 import ScrollToTop from "@/components/scroll-to-top";
 import Background from "@/components/background";
 import LandingPage from "@/pages/landing-page";
@@ -11,9 +11,9 @@ const routes = [
   {
     element: (
       <>
+        <AnimatedOutlet />
         <ScrollToTop />
         <Background />
-        <AnimatedOutlet />
       </>
     ),
     children: [
