@@ -122,11 +122,12 @@ const NavLinks = () => {
         initial="initial"
         animate="animate"
         exit="exit"
+        className="w-full lg:w-auto"
       >
         <Link
           to={link.href as string}
           onClick={link.onClick}
-          className="flex h-full items-center px-2 py-1"
+          className="flex h-full w-full items-center px-2 py-1"
         >
           <p className="w-full text-center font-futura text-base font-normal text-white">
             {link.text}
