@@ -39,8 +39,8 @@ const backgroundTransition = {
 
 const contentTransition = {
   type: "tween",
-  duration: 0.2,
-  staggerChildren: 0.1,
+  duration: 0.4,
+  staggerChildren: 0.2,
 };
 
 const viewport = {
@@ -94,25 +94,22 @@ const NavBar = () => {
             <motion.nav
               variants={navChildVariants}
               transition={contentTransition}
-              className="hidden lg:flex"
             >
-              <ul className="flex">
+              <ul className="hidden lg:flex">
                 <NavLinks />
               </ul>
+              <button
+                className={
+                  "pointer-events-auto z-50 flex h-10 w-14 items-center justify-center border border-muted bg-transparent px-3 shadow-none focus:outline-none lg:hidden " +
+                  navBarBackground
+                }
+                type="button"
+                aria-label="Toggle navigation"
+                onClick={toggleDrawer}
+              >
+                <HamburgerMenu className="h-full w-full fill-muted brightness-200" />
+              </button>
             </motion.nav>
-            <motion.button
-              variants={navChildVariants}
-              transition={contentTransition}
-              className={
-                "pointer-events-auto z-50 flex h-10 w-14 items-center justify-center border border-muted bg-transparent px-3 shadow-none focus:outline-none lg:hidden " +
-                navBarBackground
-              }
-              type="button"
-              aria-label="Toggle navigation"
-              onClick={toggleDrawer}
-            >
-              <HamburgerMenu className="h-full w-full fill-muted brightness-200" />
-            </motion.button>
           </motion.div>
         </Container>
         <NavDrawer
