@@ -4,7 +4,7 @@ import ContentPadding from "@/components/content-padding";
 import SectionHeader from "@/components/section-header";
 import { LinkArrow } from "@/assets/icons";
 
-const contentVariants = {
+const variants = {
   initial: {
     opacity: 0,
   },
@@ -40,7 +40,7 @@ const AboutSection = () => {
           <ContentPadding>
             <div className="flex w-full flex-col items-center justify-center gap-4">
               <motion.p
-                variants={contentVariants}
+                variants={variants}
                 transition={transition}
                 viewport={viewport}
                 initial="initial"
@@ -147,7 +147,7 @@ const AboutSection = () => {
               </motion.p>
               <hr className="h-px w-full border-none bg-muted" />
               <motion.div
-                variants={contentVariants}
+                variants={variants}
                 transition={transition}
                 viewport={viewport}
                 initial="initial"

@@ -32,7 +32,7 @@ const controlTransition = {
   staggerChildren: 0.2,
 };
 
-const presentTransition = { type: "tween", duration: 0.8 };
+const legendTransition = { type: "tween", duration: 0.8 };
 
 const MotionButton = motion(Button);
 
@@ -78,6 +78,10 @@ const ExplorationMenu = () => {
       : JSON.stringify(selectedMoonquake);
 
   const selectActive = selectedMoonquake !== undefined;
+
+  const selectText = selectedMoonquake
+    ? "Deselect Seismic Event"
+    : "Select a Seismic Event";
 
   const toggleTopographicViewHandler = () => {
     dispatch(toggleTopographicView());
@@ -156,7 +160,7 @@ const ExplorationMenu = () => {
           variants={controlVariants}
           transition={controlTransition}
           animate={animateSelect}
-          text="Select a Seismic Event"
+          text={selectText}
           onChange={selectedMoonquakeChangeHandler}
           active={selectActive}
           value={selectValue}
@@ -165,7 +169,7 @@ const ExplorationMenu = () => {
       </motion.div>
       <motion.div
         variants={legendVariants}
-        transition={presentTransition}
+        transition={legendTransition}
         initial="hidden"
         animate={topographicView ? "visible" : "hidden"}
         className="flex w-full flex-col items-start gap-1"

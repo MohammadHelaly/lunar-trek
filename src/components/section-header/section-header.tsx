@@ -6,16 +6,7 @@ interface Props {
   textTheme?: "light" | "dark";
 }
 
-const parentVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
-
-const childVariants = {
+const variants = {
   initial: {
     opacity: 0,
   },
@@ -46,7 +37,7 @@ const SectionHeader = (props: Props) => {
 
   return (
     <motion.div
-      variants={parentVariants}
+      variants={variants}
       transition={transition}
       viewport={viewport}
       initial="initial"
@@ -54,7 +45,7 @@ const SectionHeader = (props: Props) => {
       className="flex w-full flex-col items-start justify-center gap-2 px-9"
     >
       <motion.h2
-        variants={childVariants}
+        variants={variants}
         transition={transition}
         className={titleClasses}
       >
@@ -62,7 +53,7 @@ const SectionHeader = (props: Props) => {
       </motion.h2>
       {subtitleText && (
         <motion.p
-          variants={childVariants}
+          variants={variants}
           transition={transition}
           className={subtitleClasses}
         >

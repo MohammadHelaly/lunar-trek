@@ -16,16 +16,7 @@ const contentVariants = {
   },
 };
 
-const informationParentVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
-
-const informationChildrenVariants = {
+const informationVariants = {
   initial: {
     opacity: 0,
     x: -40,
@@ -88,7 +79,7 @@ const ContactSection = () => {
               </motion.p>
               <hr className="h-px w-full border-none bg-muted" />
               <motion.div
-                variants={informationParentVariants}
+                variants={informationVariants}
                 transition={informationTransition}
                 viewport={informationViewport}
                 initial="initial"
@@ -98,7 +89,7 @@ const ContactSection = () => {
                 {contactData.map((contact) => (
                   <motion.div
                     key={contact.photo}
-                    variants={informationChildrenVariants}
+                    variants={informationVariants}
                     transition={informationTransition}
                     className="w-full"
                   >

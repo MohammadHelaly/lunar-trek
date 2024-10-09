@@ -7,7 +7,7 @@ import NavLinks from "@/components/nav-links";
 import NavDrawer from "@/components/nav-drawer";
 import { HamburgerMenu } from "@/assets/icons";
 
-const navBackgroundVariants = {
+const backgroundVariants = {
   initial: {
     clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
   },
@@ -16,14 +16,7 @@ const navBackgroundVariants = {
   },
 };
 
-const navParentVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: { opacity: 1 },
-};
-
-const navChildVariants = {
+const contentVariants = {
   initial: {
     opacity: 0,
   },
@@ -75,7 +68,7 @@ const NavBar = () => {
   return (
     <header className="fixed top-0 z-50 w-full bg-transparent">
       <motion.div
-        variants={navBackgroundVariants}
+        variants={backgroundVariants}
         transition={backgroundTransition}
         initial="initial"
         animate={animate ? "animate" : "initial"}
@@ -84,7 +77,7 @@ const NavBar = () => {
       <div className="relative w-full py-2 lg:py-3">
         <Container>
           <motion.div
-            variants={navParentVariants}
+            variants={contentVariants}
             transition={contentTransition}
             viewport={viewport}
             initial="initial"
@@ -92,7 +85,7 @@ const NavBar = () => {
             className="flex w-full items-center gap-2 lg:justify-end"
           >
             <motion.nav
-              variants={navChildVariants}
+              variants={contentVariants}
               transition={contentTransition}
             >
               <ul className="hidden lg:flex">
