@@ -4,7 +4,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const pageVariants = {
+const variants = {
   initial: {
     opacity: 0,
   },
@@ -16,7 +16,7 @@ const pageVariants = {
   },
 };
 
-const pageTransition = {
+const transition = {
   type: "tween",
   ease: "anticipate",
   duration: 1,
@@ -27,8 +27,8 @@ const AnimatedPage = (props: Props) => {
 
   return (
     <motion.div
-      variants={pageVariants}
-      transition={pageTransition}
+      variants={variants}
+      transition={transition}
       initial="initial"
       animate="in"
       exit="out"

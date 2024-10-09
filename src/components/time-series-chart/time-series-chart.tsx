@@ -39,7 +39,7 @@ const completeMoonquakeData: MoonquakeData[] = [
   ...lognonne2003MoonquakeData,
 ];
 
-const chartVariants = {
+const variants = {
   hidden: { opacity: 0, y: -40, pointerEvents: "none" as const },
   visible: { opacity: 1, y: 0, pointerEvents: "auto" as const },
 };
@@ -102,7 +102,7 @@ const TimeSeriesChart = () => {
     <AnimatePresence>
       {viewTimeSeriesData.on && (
         <motion.div
-          variants={chartVariants}
+          variants={variants}
           transition={transition}
           initial="hidden"
           animate="visible"

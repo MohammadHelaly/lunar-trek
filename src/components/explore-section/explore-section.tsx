@@ -16,18 +16,7 @@ const contentVariants = {
   },
 };
 
-const linksParentVariants = {
-  initial: {
-    opacity: 0,
-    x: -40,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-  },
-};
-
-const linksChildrenVariants = {
+const linksVariants = {
   initial: {
     opacity: 0,
     x: -40,
@@ -81,7 +70,7 @@ const ExploreSection = () => {
               </motion.p>
               <hr className="h-px w-full border-none bg-muted" />
               <motion.div
-                variants={linksParentVariants}
+                variants={linksVariants}
                 transition={linksTransition}
                 viewport={viewport}
                 initial="initial"
@@ -89,7 +78,7 @@ const ExploreSection = () => {
                 className="mx-auto flex w-full flex-col gap-2 md:gap-4 lg:w-1/2 lg:py-4"
               >
                 <motion.div
-                  variants={linksChildrenVariants}
+                  variants={linksVariants}
                   transition={linksTransition}
                   className="w-full"
                 >
@@ -100,7 +89,7 @@ const ExploreSection = () => {
                   />
                 </motion.div>
                 <motion.div
-                  variants={linksChildrenVariants}
+                  variants={linksVariants}
                   transition={linksTransition}
                   className="w-full"
                 >

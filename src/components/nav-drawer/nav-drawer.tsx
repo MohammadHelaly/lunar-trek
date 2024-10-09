@@ -9,7 +9,7 @@ interface Props {
   animate: boolean;
 }
 
-const navBackgroundVariants = {
+const backgroundVariants = {
   initial: {
     clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
   },
@@ -32,7 +32,7 @@ const backgroundTransition = {
   duration: 0.4,
 };
 
-const contentTransition = {
+const drawerTransition = {
   type: "tween",
   duration: 0.2,
 };
@@ -50,7 +50,7 @@ const NavDrawer = (props: Props) => {
               animate="visible"
               exit="hidden"
               variants={drawerVariants}
-              transition={contentTransition}
+              transition={drawerTransition}
               className={
                 "fixed top-0 z-40 w-full bg-transparent pt-14 lg:hidden " +
                 background
@@ -58,7 +58,7 @@ const NavDrawer = (props: Props) => {
             >
               <nav className="relative">
                 <motion.div
-                  variants={navBackgroundVariants}
+                  variants={backgroundVariants}
                   transition={backgroundTransition}
                   initial={open && animate ? "animate" : "intial"}
                   animate={animate ? "animate" : "initial"}

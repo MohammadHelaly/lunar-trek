@@ -3,16 +3,7 @@ import Container from "@/components/container";
 import Icon from "@/components/icon";
 import { GitHub } from "@/assets/icons";
 
-const parentVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
-
-const childVariants = {
+const variants = {
   initial: {
     opacity: 0,
   },
@@ -39,7 +30,7 @@ const Footer = () => {
     <footer id="footer" className="bg-blue py-12">
       <Container>
         <motion.div
-          variants={parentVariants}
+          variants={variants}
           transition={transition}
           viewport={viewport}
           initial="initial"
@@ -47,7 +38,7 @@ const Footer = () => {
           className="flex w-full flex-col items-center justify-center gap-4 lg:items-start"
         >
           <motion.div
-            variants={childVariants}
+            variants={variants}
             transition={transition}
             className="flex w-full flex-col items-center justify-center gap-4 lg:flex-row lg:items-end lg:justify-between lg:px-2"
           >
@@ -131,7 +122,7 @@ const Footer = () => {
           </motion.div>
           <hr className="h-px w-full border-none !bg-muted" />
           <motion.p
-            variants={childVariants}
+            variants={variants}
             transition={transition}
             className="text-center font-futura text-xs font-thin text-white sm:text-[13px] lg:px-2 lg:text-start"
           >
