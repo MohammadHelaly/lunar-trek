@@ -93,7 +93,7 @@ const NavBar = () => {
               </ul>
               <button
                 className={
-                  "pointer-events-auto z-50 flex h-10 w-14 items-center justify-center border border-muted bg-transparent px-3 shadow-none focus:outline-none lg:hidden " +
+                  "pointer-events-auto z-50 flex h-10 w-14 items-center justify-center border border-muted bg-transparent px-3 shadow-none lg:hidden " +
                   navBarBackground
                 }
                 type="button"
