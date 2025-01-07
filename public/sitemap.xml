@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.lunar-trek.vercel.app/</loc>
-    <lastmod>2024-08-21</lastmod>
+    <loc>https://www.mohammadhelaly.github.io/lunar-trek/</loc>
+       <lastmod>2024-08-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.lunar-trek.vercel.app/globe-exploration</loc>
+    <loc>https://www.mohammadhelaly.github.io/lunar-trek/globe-exploration</loc>
     <lastmod>2024-08-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.lunar-trek.vercel.app/unreal-engine-exploration</loc>
+    <loc>https://www.mohammadhelaly.github.io/lunar-trek/unreal-engine-exploration</loc>
     <lastmod>2024-08-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-  </url>
 </urlset>
