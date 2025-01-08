@@ -16,7 +16,7 @@ const ContactInformation = (props: Props) => {
       <div className="flex h-full flex-row items-center gap-2 xl:gap-3">
         <img
           src={photo}
-          alt={typeof name === "string" ? name : "Profile photo"}
+          alt={typeof name === "string" ? name : "Profile Photo"}
           className="aspect-square h-full rounded-none"
         />
         <h3 className="font-futura text-xl font-light text-white transition-colors duration-[200ms] group-hover:text-blue max-[370px]:text-base md:text-2xl xl:text-3xl">
