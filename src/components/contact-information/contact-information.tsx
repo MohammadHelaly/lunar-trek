@@ -1,5 +1,5 @@
 import Icon from "@/components/icon";
-import { Gmail, GitHub, LinkedIn } from "@/assets/icons";
+import { Email, GitHub, LinkedIn } from "@/assets/icons";
 
 interface Props {
   photo: string;
@@ -25,7 +25,7 @@ const ContactInformation = (props: Props) => {
       </div>
       <div className="flex flex-row items-center justify-center gap-2 px-2 xl:gap-4">
         <Icon link={emailLink}>
-          <Gmail className="size-6 fill-white transition-colors duration-[200ms] group-hover:fill-blue md:size-7 lg:size-9" />
+          <Email className="size-6 fill-white transition-colors duration-[200ms] group-hover:fill-blue md:size-7 lg:size-9" />
         </Icon>
         <Icon link={linkedinLink}>
           <LinkedIn className="size-5 fill-white transition-colors duration-[200ms] group-hover:fill-blue md:size-6 lg:size-8" />

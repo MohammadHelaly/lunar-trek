@@ -8,7 +8,7 @@ const contactData = [
       </>
     ),
     photo: import.meta.env.BASE_URL + "assets/images/mohammad-helaly.jpg",
-    emailLink: "mailto:mohammad.helaly@gmail.com",
+    emailLink: "mailto:mohammad.helaly@outlook.com",
     linkedinLink: "https://www.linkedin.com/in/mohammadhelaly/",
     githubLink: "https://github.com/MohammadHelaly",
   },
