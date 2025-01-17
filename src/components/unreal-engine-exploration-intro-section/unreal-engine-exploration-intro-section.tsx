@@ -42,7 +42,7 @@ const UnrealEngineExplorationIntroSection = () => {
   return (
     <section
       id="unreal-engine-exploration-intro"
-      className="mb-10 mt-28 overflow-x-hidden bg-blue py-12 md:mb-20 md:mt-56 lg:my-28 xl:my-32 2xl:my-36"
+      className="mb-10 mt-28 overflow-x-hidden bg-blue py-12 md:mb-20 md:mt-56 lg:my-28 xl:my-32 2xl:my-36 2xl:mt-56"
     >
       <Container>
         <div className="flex flex-col items-center justify-center gap-12 pb-4">
