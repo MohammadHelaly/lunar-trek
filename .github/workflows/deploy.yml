@@ -35,7 +35,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/github-pages'
+    if: github.ref == 'refs/heads/spa-routing'
 
     steps:
       - name: Download artifact
