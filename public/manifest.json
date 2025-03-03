@@ -4,8 +4,8 @@
   "description": "Explore the secrets beneath the surface of Earth's moon.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#212529",
-  "theme_color": "#212529",
+  "background_color": "#06060c",
+  "theme_color": "#06060c",
   "icons": [
     {
       "src": "/favicon.ico",
