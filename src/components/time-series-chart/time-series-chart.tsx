@@ -61,10 +61,10 @@ const TimeSeriesChart = () => {
   };
 
   const dataTypeColors: DataTypeColors = {
-    "Shallow Moonquake": "rgb(239, 255, 92)",
-    "Deep Moonquake": "rgb(170, 0, 190)",
-    "Meteorite Impact": "rgb(0, 175, 90)",
-    "Artificial Impact": "rgb(0, 205, 255)",
+    "Shallow Moonquake": "#efff5c",
+    "Deep Moonquake": "#aa00be",
+    "Meteorite Impact": "#00af5a",
+    "Artificial Impact": "#00cdff",
   };
 
   const countByYearAndType = (data: MoonquakeData[]) => {
