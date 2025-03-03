@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 interface Props {
   link?: string;
+  name?: string;
   children: React.ReactNode;
 }
 
@@ -22,7 +23,7 @@ const transition = {
 };
 
 const Icon = (props: Props) => {
-  const { link, children } = props;
+  const { link, name, children } = props;
 
   return (
     <motion.span
@@ -33,7 +34,12 @@ const Icon = (props: Props) => {
       whileTap="animate"
     >
       {link ? (
-        <motion.a href={link} target="_blank" rel="noopener noreferrer">
+        <motion.a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={name}
+        >
           {children}
         </motion.a>
       ) : (
