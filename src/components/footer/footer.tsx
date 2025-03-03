@@ -116,7 +116,10 @@ const Footer = () => {
                 .
               </p>
             </div>
-            <Icon link="https://github.com/MohammadHelaly/lunar-trek">
+            <Icon
+              link="https://github.com/MohammadHelaly/lunar-trek"
+              name="GitHub"
+            >
               <GitHub className="size-8 rounded-sm fill-white" />
             </Icon>
           </motion.div>
