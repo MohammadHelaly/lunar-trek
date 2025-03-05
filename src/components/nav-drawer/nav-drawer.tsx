@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import * as Dialog from "@radix-ui/react-dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import NavLinks from "@/components/nav-links";
 
 interface Props {
@@ -56,18 +57,23 @@ const NavDrawer = (props: Props) => {
                 background
               }
             >
-              <nav className="relative">
-                <motion.div
-                  variants={backgroundVariants}
-                  transition={backgroundTransition}
-                  initial={open && animate ? "animate" : "intial"}
-                  animate={animate ? "animate" : "initial"}
-                  className="absolute inset-0 left-0 top-0 bg-blue"
-                />
-                <ul className="flex flex-col items-center gap-2 p-3 pt-0">
-                  <NavLinks />
-                </ul>
-              </nav>
+              <VisuallyHidden>
+                <Dialog.Title>Navigation Menu</Dialog.Title>
+              </VisuallyHidden>
+              <Dialog.Description asChild>
+                <nav className="relative">
+                  <motion.div
+                    variants={backgroundVariants}
+                    transition={backgroundTransition}
+                    initial={open && animate ? "animate" : "intial"}
+                    animate={animate ? "animate" : "initial"}
+                    className="absolute inset-0 left-0 top-0 bg-blue"
+                  />
+                  <ul className="flex flex-col items-center gap-2 p-3 pt-0">
+                    <NavLinks />
+                  </ul>
+                </nav>
+              </Dialog.Description>
             </motion.div>
           </Dialog.Content>
         )}
