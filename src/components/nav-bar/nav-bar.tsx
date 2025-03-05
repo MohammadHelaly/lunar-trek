@@ -87,6 +87,7 @@ const NavBar = () => {
             <motion.nav
               variants={contentVariants}
               transition={contentTransition}
+              className="z-50"
             >
               <ul className="hidden lg:flex">
                 <NavLinks />
