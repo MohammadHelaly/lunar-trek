@@ -117,7 +117,7 @@ const UnrealEngineExplorationDownloadSection = () => {
                 <Button
                   text="Download and Try It Yourself"
                   strongText
-                  link="https://drive.google.com/drive/folders/1RILwmJiD-WPrtRR3bltP_I1SANGxLZVE?usp=drive_link"
+                  link="https://drive.google.com/file/d/1KHxgiR-UJtHpS01MdU9-TFYcboxizkhd/view?usp=sharing"
                   newTab
                 />
               </motion.div>
