@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 interface Props {
   link?: string;
   name?: string;
+  download?: boolean;
   children: React.ReactNode;
 }
 
@@ -23,7 +24,7 @@ const transition = {
 };
 
 const Icon = (props: Props) => {
-  const { link, name, children } = props;
+  const { link, name, download, children } = props;
 
   return (
     <motion.span
@@ -37,6 +38,7 @@ const Icon = (props: Props) => {
         <motion.a
           href={link}
           target="_blank"
+          download={download}
           rel="noopener noreferrer"
           aria-label={name}
         >
